@@ -1,9 +1,13 @@
 package Test.Music;
 
-public class PopMusic implements Music {
+public class HipHopMusic implements Music{
+    private String song = "Playing Hip Hop";
     private String title;
-    private String song = "Playing pop music";
 
+
+    public String getTitle() {
+        return title;
+    }
 
     public void setTitle(String title) {
         this.title = title;
@@ -13,5 +17,4 @@ public class PopMusic implements Music {
     public String getSong() {
         return this.song;
     }
-
 }

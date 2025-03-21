@@ -1,20 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-		https://www.springframework.org/schema/beans/spring-beans.xsd">
+		https://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
 
     <bean
-            id="musicBean" class="Test.Music.RockMusic">
+            id="musicBean" class="Test.Music.PopMusic">
     </bean>
 
     <bean
         id = "musicPlayer" class="Test.Music.MusicPlayer">
-        <constructor-arg
-                ref="musicBean">
-        </constructor-arg>
+        <property name="music" ref="musicBean"/>
+        <property name="title" value="some name"/>
+        
+        <property name="songs">
+            <util:list id="song" value-type="java.lang.String">
+                <value >eeee</value>
+                <value >123</value>
+                <value >eee233e</value>
+            </util:list>
+        </property>
+        
+
+
     </bean>
 
+<!--    <util:list id="songs" value-type="java.lang.String">-->
+<!--        <value>first</value>-->
+<!--        <value>second</value>-->
+<!--    </util:list>-->
 
 
 </beans>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
