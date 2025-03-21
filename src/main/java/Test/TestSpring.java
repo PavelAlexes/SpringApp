@@ -1,5 +1,7 @@
 package Test;
 
+import Test.Music.Music;
+import Test.Music.MusicPlayer;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class TestSpring {
@@ -7,10 +9,12 @@ public class TestSpring {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
                 "applicationContext.xml");
 
-        Human human = context.getBean("pavel", Human.class);
+        Music music = context.getBean("musicBean", Music.class);
+        MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
 
-        System.out.println(human);
-
+//        MusicPlayer musicPlayer = new MusicPlayer(music);
+//        musicPlayer.playMusic();
+        musicPlayer.playMusic();
         context.close();
     }
 
