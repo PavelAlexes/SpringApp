@@ -11,6 +11,7 @@ public class MainMusic {
         MusicPlayer musicPlayer = classPathXmlApplicationContext.getBean("musicPlayer" , MusicPlayer.class);
 
         musicPlayer.playMusic();
+        System.out.println(musicPlayer.getTitle());
         musicPlayer.playSong();
 
 

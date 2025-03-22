@@ -9,6 +9,10 @@ public class PopMusic implements Music {
         this.title = title;
     }
 
+    public String getTitle() {
+        return title;
+    }
+
     @Override
     public String getSong() {
         return this.song;

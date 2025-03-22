@@ -6,18 +6,19 @@
 
     <bean
             id="musicBean" class="Test.Music.PopMusic">
+            <property name="title" value="rehana"/>
     </bean>
 
     <bean
         id = "musicPlayer" class="Test.Music.MusicPlayer">
         <property name="music" ref="musicBean"/>
-        <property name="title" value="some name"/>
+<!--        <property name="title" value="some name"/>-->
         
         <property name="songs">
-            <util:list id="song" value-type="java.lang.String">
-                <value >eeee</value>
-                <value >123</value>
-                <value >eee233e</value>
+            <util:list id="songList" value-type="java.lang.String">
+                <value >first song</value>
+                <value >second song</value>
+                <value >fired song</value>
             </util:list>
         </property>
         
